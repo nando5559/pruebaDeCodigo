@@ -1,0 +1,90 @@
+﻿@model IEnumerable<CrudPeliculas.Models.Pelicula>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .tabla {
+        border: solid #000000;
+        background-color:silver;
+        margin: auto;
+        position: relative;
+        margin-left: 25%;
+        margin-top:15%;
+        min-width:700px;
+        overflow-x:auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: blue;
+    }
+
+
+    .cargar-pelicula {
+        background-color: darkgrey;
+        text-decoration: solid;
+        
+
+    }
+    .cargar-pelicula a{
+        text-decoration:none;
+    }
+    .boton a{
+        text-decoration:none;
+    }
+    .titulo{
+        background-color:Highlight;
+        text-align:center;
+    }
+   </style>
+
+
+<table class="tabla">
+        
+         <thead>
+             <tr><td><button class="cargar-pelicula "> <a asp-action="Create">CARGAR PELICULA</a></button></td></tr>
+             <tr> <td colspan="5" class="titulo">Stock de Peliculas</td></tr>
+             
+             <tr>
+                 <th>
+                     @Html.DisplayNameFor(model => model.Titulo)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.FechaEstreno)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.Genero)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.Precio)
+                 </th>
+                 <th></th>
+             </tr>
+         </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaEstreno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                <td class="boton">
+
+                    <button> <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> </button>
+                    <button>    <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> </button>
+                    <button>  <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>  </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

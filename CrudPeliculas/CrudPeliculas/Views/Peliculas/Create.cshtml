@@ -1,0 +1,51 @@
+﻿@model CrudPeliculas.Models.Pelicula
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link href="~/css/cargarPelicula.css" rel="stylesheet" />
+
+
+
+
+    <div class="cargar-Pelicula">
+        <h2 class="form-titulo">Cargar una Pelicula</h2>
+        <form asp-action="Create">
+            <div class="contenedor-etiqueta">
+            
+                 <label asp-for="Titulo"></label>
+                 <input asp-for="Titulo"/>
+            
+
+
+
+            
+                
+                <label asp-for="FechaEstreno "></label>
+           <input  asp-for="FechaEstreno" />
+            
+
+            
+                <label asp-for="Genero "></label>
+                <input asp-for="Genero"  />
+            
+
+           
+                <label asp-for="Precio "></label>
+               <input asp-for="Precio" />
+            </div>
+
+            <div class="enviar">
+                <input type="submit" value="Crear" />
+            </div>
+        </form>
+    </div>
+
+
+<div class="lista">
+   
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

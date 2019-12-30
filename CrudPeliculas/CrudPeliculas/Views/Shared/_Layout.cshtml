@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CrudPeliculas</title>
+
+
+    <link href="~/css/sitio.css" rel="stylesheet" />
+
+    <link href="~/css/menu.css" rel="stylesheet" />
+</head>
+<body>
+
+    
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img src="~/img/icono.png" alt=""></label>
+        <nav class="menu">
+
+            <ul>
+                <li>
+                    <a class="" asp-area="" asp-controller="Home" asp-action="Index">inicio</a>
+                </li>
+
+                <li>
+                    <a class="" asp-area="" asp-controller="Peliculas" asp-action="Index">Stock</a>
+
+                </li>
+                <li>
+                    <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+            </ul>
+
+
+        </nav>
+    </header>
+    
+        <main>
+
+            @RenderBody()
+
+
+        </main>
+   
+
+    <footer class="pie">
+
+
+        &copy; 2019 - CrudPeliculas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+    </footer>
+
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

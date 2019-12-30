@@ -1,0 +1,43 @@
+﻿
+.editar {
+    background-color: white;
+    border-color: darkgray;
+    border: 3px;
+    width: 98%;
+    margin: auto;
+    max-width: 350px;
+    border-radius: 10px;
+    position: relative;
+    top: 80px;
+}
+@media (max-width) {
+    form{
+        width:100%;
+    }
+}
+.form-titulo {
+    background-color: dodgerblue;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.boton-enviar {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.volver-listado p {
+    color: white;
+    margin-left: 40%;
+    margin-top: 6%;
+}

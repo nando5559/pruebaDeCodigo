@@ -1,0 +1,50 @@
+﻿@model CrudPeliculas.Models.Pelicula
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<link href="~/css/editarFormulario.css" rel="stylesheet" />
+
+
+
+
+<div class="editar">
+    <h3 class="form-titulo">EDITAR PELICULA</h3>
+        <form asp-action="Edit">
+          
+            <input type="hidden" asp-for="Id" />
+           <div class="contenedor-datos">
+                <label asp-for="Titulo" ></label>
+                <input asp-for="Titulo"  />
+               
+            </div>
+            <div class="contenedor-datos">
+                <label asp-for="FechaEstreno" ></label>
+                <input asp-for="FechaEstreno"  />
+              
+            </div>
+            <div class="contenedor-datos">
+                <label asp-for="Genero"></label>
+                <input asp-for="Genero"  />
+              
+            </div>
+            <div class="contenedor-datos">
+                <label asp-for="Precio" ></label>
+                <input asp-for="Precio"  />
+               
+            </div>
+            <div class="boton-enviar">
+                <input type="submit" value="Grabar"  />
+            </div>
+        </form>
+    </div>
+
+
+<div class="volver-listado">
+    <a asp-action="Index"><p>Volver al stock</p> </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,25 @@
+﻿
+.vinculo img {
+    display: inline-block;
+ 
+    width: 30%;
+    height: 10%;
+   margin-left:400px;
+   
+
+   
+}
+
+.vinculo1 img {
+    display: inline-block;
+    width: 30%;
+    height: 3%;
+    margin-left: 470px;
+}
+
+.vinculo2 img {
+    display: inline-block;
+    width: 30%;
+    height: 20%;
+    margin-left: 370px
+}
